@@ -1,0 +1,20 @@
+.todo-div {
+  background-color: #d6ae7e;
+  border: 3px solid black;
+}
+.todo-div input {
+  padding: 0.7em;
+  border: 1px solid black;
+  background-color: chocolate;
+  cursor: pointer;
+}
+.todo-div p {
+  background-color: #eed1ad;
+}
+.todo-div p.first {
+  background-color: transparent;
+}
+.todo-div .text-color {
+  color: black;
+  background-color: #b14536;
+}/*# sourceMappingURL=single-todo.component.css.map */

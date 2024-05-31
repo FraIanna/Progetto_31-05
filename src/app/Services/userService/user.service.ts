@@ -811,6 +811,7 @@ export class UserService {
   ];
   todoArr: iTodo[] = [];
   todoWithUser: iTodo[] = [];
+  userWithTodo: iUser[] = [];
   constructor(private todoSvc: TodoService) {
     this.ngOnInit();
   }
@@ -825,5 +826,14 @@ export class UserService {
       return t;
     });
     console.log(this.todoWithUser);
+  }
+
+  getUsersWithTodo() {
+    this.userWithTodo = this.users.map((u) => {
+      let todos = this.todoArr.filter((t) => t.userId == u.id);
+      u.todos = todos;
+      return u;
+    });
+    console.log(this.userWithTodo);
   }
 }

@@ -1,32 +1,10 @@
+<div class="container-fluid py-5 py-1 rounded-2">
+  <h1 class="text-center">All todos</h1>
+  <hr />
+</div>
+
 <div class="row">
-  <div class="col pb-5 pt-3">
-    <h1 class="text-center">All todos</h1>
-  </div>
-  <div class="row">
-    <div class="col-6" *ngFor="let todo of todoArr">
-      <div class="todo-div align-items-center m-2 p-2 rounded-3 gap-3">
-        <div class="d-flex justify-content-between">
-          <h4>
-            {{ todo.todo }}
-          </h4>
-          <form>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"></label>
-            </div>
-          </form>
-        </div>
-        <p
-          class="fs-5 fw-normal px-3 border border-1 border-black rounded-2"
-          *ngIf="todoWithUser"
-        >
-          - {{ todo.user?.firstName }} {{ todo.user?.lastName }}
-        </p>
-      </div>
-    </div>
+  <div class="col-6 my-3" *ngFor="let todo of todoArr">
+    <app-single-todo [todo]="todo"></app-single-todo>
   </div>
 </div>

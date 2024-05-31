@@ -1,1 +1,10 @@
-/*# sourceMappingURL=completed.component.css.map */
+.todo-div {
+  background-color: #d6ae7e;
+  border: 3px solid black;
+}
+.todo-div input {
+  padding: 0.7em;
+  border: 1px solid black;
+  background-color: chocolate;
+  cursor: pointer;
+}/*# sourceMappingURL=completed.component.css.map */

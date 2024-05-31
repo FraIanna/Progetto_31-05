@@ -7,4 +7,14 @@
     background-color: chocolate;
     cursor: pointer;
   }
+  p {
+    background-color: #eed1ad;
+    &.first {
+      background-color: transparent;
+    }
+  }
+  .text-color {
+    color: black;
+    background-color: #b14536;
+  }
 }

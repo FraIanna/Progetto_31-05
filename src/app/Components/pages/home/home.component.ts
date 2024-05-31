@@ -10,11 +10,10 @@ import { UserService } from '../../../Services/userService/user.service';
 })
 export class HomeComponent {
   todoArr: iTodo[] = [];
-  todoWithUser: iTodo[] = [];
-  constructor(private todoSvc: TodoService, private userSvc: UserService) {}
+
+  constructor(private todoSvc: TodoService) {}
 
   ngOnInit() {
     this.todoArr = this.todoSvc.todos;
-    this.userSvc.getTodoWithUser();
   }
 }

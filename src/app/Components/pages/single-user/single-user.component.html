@@ -1,0 +1,54 @@
+<div
+  class="d-flex position-relative border-black border-3 h-100 p-2 shadow rounded-3 todo-div"
+>
+  <div>
+    <h4>{{ user.firstName }} {{ user.lastName }}</h4>
+    <hr />
+    <div class="d-flex gap-2 text-bg-dark rounded-2 px-2 py-1">
+      <p class="first">
+        <a href="#" class="link-light link-underline-opacity-0">
+          {{ user.email }} |
+        </a>
+      </p>
+      <p class="first">{{ user.title }}</p>
+    </div>
+    <hr />
+    <div class="d-flex justify-content-between align-items-start gap-3">
+      <div>
+        <form *ngFor="let todo of user.todos">
+          <div
+            class="pb-3 form-check d-flex gap-3 align-items-center border-bottom border-black"
+          >
+            <input
+              type="checkbox"
+              [(ngModel)]="todo.completed"
+              class="form-check-input"
+              id="exampleCheck1"
+              name="check"
+            />
+            <label class="form-check-label" for="exampleCheck1">{{
+              todo.todo
+            }}</label>
+          </div>
+        </form>
+      </div>
+      <div class="d-flex flex-column">
+        <div
+          *ngFor="let todo of user.todos"
+          [ngClass]="{
+            'text-bg-success': todo.completed,
+            'text-color2': !todo.completed
+          }"
+          class="rounded-3 d-flex justify-content-center align-items-center px-1 mb-2"
+        >
+          <p class="first fs-6">
+            {{ todo.completed ? "Completed!" : "Not yet complete" }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="position-absolute div-img">
+    <img [src]="user.image" alt="image" class="w-100" />
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.div-img {
+  top: -1em;
+  right: 0;
+  width: 5em;
+}
+
+.todo-div input {
+  padding: 0.7em;
+  border: 1px solid black;
+  background-color: chocolate;
+  cursor: pointer;
+}/*# sourceMappingURL=single-user.component.css.map */

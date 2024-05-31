@@ -909,4 +909,8 @@ export class TodoService {
   ];
 
   constructor() {}
+
+  getByCompleted(todos: iTodo[]): iTodo[] {
+    return this.todos.filter((todo) => todo.completed === true);
+  }
 }

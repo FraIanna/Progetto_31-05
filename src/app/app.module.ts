@@ -10,6 +10,8 @@ import { UsersComponent } from './Components/pages/users/users.component';
 import { Page404Component } from './Components/pages/page404/page404.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SingleTodoComponent } from './Components/pages/single-todo/single-todo.component';
+import { SingleUserComponent } from './Components/pages/single-user/single-user.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CompletedComponent,
     UsersComponent,
     Page404Component,
+    SingleTodoComponent,
+    SingleUserComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],
